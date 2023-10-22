@@ -2,24 +2,23 @@ package model;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import java.util.Locale;
 
 public class Circle extends Shape{
-    private final double height, width;
-    public Circle(Color strokeColor, Color fillColor, double height, double width){
-        super(strokeColor, fillColor);
-        this.height = height;
-        this.width = width;
+    public Circle(){
+        super("Круг", Color.BLACK, Color.GREEN, 90, 90);
     }
     @Override
     public void draw(GraphicsContext gc) {
-        gc.setStroke(this.strokeColor);
         gc.setLineWidth(5.0);
-        gc.strokeOval(this.x - (height/2), this.y - (width/2), height, width);
-        gc.setFill(this.fillColor);
-        gc.fillOval(this.x - (height/2), this.y - (width/2), height, width);
+        gc.setStroke(this.getStrokeColor());
+        gc.strokeOval(this.getX() - (this.getHeight()/2), this.getY() - (this.getWidth()/2), this.getHeight(), this.getWidth());
+        gc.setFill(this.getFillColor());
+        gc.fillOval(this.getX() - (this.getHeight()/2), this.getY() - (this.getWidth()/2), this.getHeight(), this.getWidth());
     }
+
     @Override
-    public String toString() {
-        return "Фигура - Круг, Размеры (Высота x Ширина): "+height + "x" +width;
+    public String discriptor() {
+        return String.format(Locale.US, "Круг %s %s %.1f %.1f %.1f %.1f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
     }
 }

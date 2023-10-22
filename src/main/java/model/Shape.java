@@ -5,21 +5,46 @@ import javafx.scene.paint.Color;
 
 public abstract class Shape
 {
-    protected final Color strokeColor, fillColor;
-    protected double x, y;
+    private String name;
+    private Color strokeColor;
+    private Color fillColor;
+    private double height;
+    private double width;
+    private double x;
+    private double y;
 
-    public abstract void draw(GraphicsContext gc);
-    public Shape(Color strokeColor, Color fillColor){
+    public Shape(String name, Color strokeColor, Color fillColor, double height, double width) {
+        this.name = name;
         this.strokeColor = strokeColor;
         this.fillColor = fillColor;
+        this.height = height;
+        this.width = width;
     }
-    public void setX(double x) {
-        this.x = x;
+    public Color getStrokeColor(){
+        return this.strokeColor;
     }
-    public void setY(double y){
-        this.y = y;
+    public void setStrokeColor(Color value){this.strokeColor = value;}
+    public Color getFillColor(){return this.fillColor;}
+    public void setFillColor(Color value){this.fillColor = value;}
+    public double getHeight(){
+        return this.height;
     }
-
-    public abstract String toString();
+    public void setHeight(double value) {this.height = value;}
+    public double getWidth() {return this.width;}
+    public void setWidth(double value) {this.width = value;}
+    public double getX() {
+        return x;
+    }
+    public void setX(double value){
+        this.x = value;
+    }
+    public double getY() {
+        return y;
+    }
+    public void setY(double value){
+        this.y = value;
+    }
+    public abstract void draw(GraphicsContext gc);
+    public abstract String discriptor();
 }
 

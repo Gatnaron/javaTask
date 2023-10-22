@@ -2,24 +2,23 @@ package model;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import java.util.Locale;
 
 public class Rectangle extends Shape{
-    private final double height, width;
-    public Rectangle(Color strokeColor, Color fillColor, double height, double width){
-        super(strokeColor, fillColor);
-        this.height = height;
-        this.width = width;
+    public Rectangle(){
+        super("Прямоугольник", Color.BLACK, Color.RED, 90, 90);
     }
     @Override
     public void draw(GraphicsContext gc) {
         gc.setLineWidth(5.0);
-        gc.setStroke(this.strokeColor);
-        gc.strokeRect(this.x - (width/2), this.y - (height/2), width, height);
-        gc.setFill(this.fillColor);
-        gc.fillRect(this.x - (width/2), this.y - (height/2), width, height);
+        gc.setStroke(this.getStrokeColor());
+        gc.strokeRect(this.getX() - (this.getWidth()/2), this.getY() - (this.getHeight()/2), this.getWidth(), this.getHeight());
+        gc.setFill(this.getFillColor());
+        gc.fillRect(this.getX() - (this.getWidth()/2), this.getY() - (this.getHeight()/2), this.getWidth(), this.getHeight());
     }
+
     @Override
-    public String toString() {
-        return "Фигура - Прямоугольник, Размеры (Высота x Ширина): "+height + "x" +width;
+    public String discriptor() {
+        return String.format(Locale.US, "Квадрат %s %s %.1f %.1f %.1f %.1f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
     }
 }

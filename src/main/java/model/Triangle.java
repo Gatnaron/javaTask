@@ -2,24 +2,23 @@ package model;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import java.util.Locale;
 
 public class Triangle extends Shape{
-    private final double height, width;
-    public Triangle(Color strokeColor, Color fillColor, double height, double width){
-        super(strokeColor, fillColor);
-        this.height = height;
-        this.width = width;
+    public Triangle(){
+        super("Треугольник", Color.BLACK, Color.BLUE, 90, 90);
     }
     @Override
     public void draw(GraphicsContext gc) {
         gc.setLineWidth(5.0);
-        gc.setStroke(this.strokeColor);
-        gc.strokePolygon(new double[] {x, x - (width/2), x + (width/2)}, new double[] {y - (height/2), y + (height/2), y + (height/2)}, 3);
-        gc.setFill(this.fillColor);
-        gc.fillPolygon(new double[] {x, x - (width/2), x + (width/2)}, new double[] {y - (height/2), y + (height/2), y + (height/2)}, 3);
+        gc.setStroke(this.getStrokeColor());
+        gc.strokePolygon(new double[] {getX(), getX() - (getWidth()/2), getX() + (getWidth()/2)}, new double[] {getY() - (getHeight()/2), getY() + (getHeight()/2), getY() + (getHeight()/2)}, 3);
+        gc.setFill(this.getFillColor());
+        gc.fillPolygon(new double[] {getX(), getX() - (getWidth()/2), getX() + (getWidth()/2)}, new double[] {getY() - (getHeight()/2), getY() + (getHeight()/2), getY() + (getHeight()/2)}, 3);
     }
+
     @Override
-    public String toString() {
-        return "Фигура - Треугольник, Размеры (Высота x Ширина): "+height + "x" +width;
+    public String discriptor() {
+        return String.format(Locale.US, "Треугольник %s %s %.1f %.1f %.1f %.1f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
     }
 }
