@@ -9,8 +9,8 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
 
-public class FileParser {
-    public static Deque<Shape> parseToShapes(File file){
+public class FileManager {
+    public static Deque<Shape> fileToShapes(File file){
         var shapes = new ArrayDeque<Shape>();
         try(var bReader = new BufferedReader(new FileReader(file))) {
             while (bReader.ready()){
@@ -33,7 +33,7 @@ public class FileParser {
         }
         return shapes;
     }
-    public static void parseToString(Deque<Shape> shapes, File file){
+    public static void fileToString(Deque<Shape> shapes, File file){
         try(FileWriter writer = new FileWriter(file, false))
         {
             Iterator<Shape> descIter = shapes.descendingIterator();

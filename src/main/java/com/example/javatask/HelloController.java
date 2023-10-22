@@ -10,7 +10,7 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.stage.FileChooser;
-import until.FileParser;
+import until.FileManager;
 
 import java.io.File;
 import java.net.URL;
@@ -63,13 +63,13 @@ public class HelloController implements Initializable {
         fileChooser.setInitialFileName("shapes_"+uniqueNumber+".txt");
         File file = fileChooser.showSaveDialog(canvas.getScene().getWindow());
         if (file != null)
-            FileParser.parseToString(shapes, file);
+            FileManager.fileToString(shapes, file);
         else
             displayWarningMessage("Неверный файл");
     }
     private void openFileHandler(ActionEvent actionEvent) {
         var selectedFile = fileChooser.showOpenDialog(canvas.getScene().getWindow());
-        Deque<Shape> fileShapes = FileParser.parseToShapes(selectedFile);
+        Deque<Shape> fileShapes = FileManager.fileToShapes(selectedFile);
         if(fileShapes.size() != 0){
             this.shapes = fileShapes;
             drawShapesOnCleanCanvas();
