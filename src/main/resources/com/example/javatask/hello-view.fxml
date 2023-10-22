@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javatask.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <BorderPane prefHeight="461.0" prefWidth="759.0">
+            <bottom>
+                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="150.0">
+                            <children>
+                                <Button fx:id="selectRectangleButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" text="Прямоугольник">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" top="15.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></Button>
+                                <Button fx:id="selectCircleButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" text="Овал">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></Button>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="150.0">
+                            <children>
+                                <Button fx:id="selectRoundRectangleButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" text="Скруг. прямоугольник">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" top="15.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Calibri" size="13.0" />
+                                    </font></Button>
+                                <Button fx:id="selectTriangleButton" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" text="Треугольник">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></Button>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="240.0">
+                            <children>
+                                <Label text="Заливка">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font>
+                                </Label>
+                                <ColorPicker fx:id="fillColorPicker">
+                                    <value>
+                                        <Color red="1.0" />
+                                    </value>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                </ColorPicker>
+                                <Label text="Контур">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></Label>
+                                <ColorPicker fx:id="strokeColorPicker">
+                                    <value>
+                                        <Color />
+                                    </value>
+                                </ColorPicker>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin></VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="240.0">
+                            <children>
+                                <Label text="Высота">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></Label>
+                                <TextField fx:id="heightTextField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="194.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></TextField>
+                                <Label text="Ширина">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></Label>
+                                <TextField fx:id="widthTextField">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font></TextField>
+                            </children></VBox>
+                    </children></HBox>
+            </bottom>
+            <center>
+                <Canvas fx:id="canvas" height="362.0" width="764.0" BorderPane.alignment="CENTER" />
+            </center>
+            <top>
+                <Label fx:id="titleShapeLabel" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Calibri" size="18.0" />
+                    </font></Label>
+            </top>
+        </BorderPane>
+    </children>
+</VBox>
