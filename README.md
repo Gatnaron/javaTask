@@ -4,5 +4,5 @@
 Результатом применения технологий программирования является программа, действующая в заданной вычислительной среде, хорошо отлаженная и документированная, доступная для понимания и развития в процессе сопровождения.
 
 Лабораторная №4-5 https://github.com/Gatnaron/Java-lab4-5  
-Лабораторная №6 https://github.com/Gatnaron/Java-lab6
+Лабораторная №6 https://github.com/Gatnaron/Java-lab6  
 Лабораторная №7 https://github.com/Gatnaron/ProgrammingTechnology-Observer-main
