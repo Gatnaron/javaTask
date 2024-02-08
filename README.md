@@ -6,3 +6,4 @@
 Лабораторная №4-5 https://github.com/Gatnaron/Java-lab4-5  
 Лабораторная №6 https://github.com/Gatnaron/Java-lab6  
 Лабораторная №7 https://github.com/Gatnaron/ProgrammingTechnology-Observer-main
+Лабораторная №8 https://github.com/Gatnaron/ProgrammingTechnology-Decorator
