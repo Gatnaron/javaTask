@@ -8,4 +8,5 @@
 Лабораторная №7 https://github.com/Gatnaron/ProgrammingTechnology-Observer-main  
 Лабораторная №8 https://github.com/Gatnaron/ProgrammingTechnology-Decorator  
 Лабораторная №14 https://github.com/Gatnaron/ProgrammingTechnology-Game  
-Лабораторная №8a https://github.com/Gatnaron/ProgrammingTechnology-DAO
+Лабораторная №8a https://github.com/Gatnaron/ProgrammingTechnology-DAO  
+JUnit test (Задача 10) - https://github.com/Gatnaron/ProgrammingTechnology-Test
