@@ -9,4 +9,5 @@
 Лабораторная №8 https://github.com/Gatnaron/ProgrammingTechnology-Decorator  
 Лабораторная №14 https://github.com/Gatnaron/ProgrammingTechnology-Game  
 Лабораторная №8a https://github.com/Gatnaron/ProgrammingTechnology-DAO  
-Test (Задача 10) https://github.com/Gatnaron/ProgrammingTechnology-Test
+Test (Задача 10) https://github.com/Gatnaron/ProgrammingTechnology-Test  
+Курсовая работа (Управление оборудованием) https://github.com/Gatnaron/ProgrammingTechnology-microService-Equipment
